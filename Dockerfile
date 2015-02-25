@@ -9,7 +9,9 @@ WORKDIR /haptava
 
 ENV HAPTAVA_HOME /haptava
 
-ENTRYPOINT ["java", "-Dlog4j.configuration=file:./log4j/shell.log4j.properties", "-jar", "./lib/shell.jar"]
+ENTRYPOINT ["java", \
+            "-Dlog4j.configuration=file:./log4j/shell.log4j.properties", \
+            "-jar", "./lib/shell.jar"]
 
-# docker run -it --entrypoint=/bin/bash haptava/shell
-# docker run -it haptava/shell -u fred -p topsecret
+# docker run -it --entrypoint=/bin/bash haptava/shell:0.9.39
+# docker run -it haptava/shell:0.9.39 -u fred -p topsecret
