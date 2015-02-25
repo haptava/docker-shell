@@ -2,6 +2,8 @@
 FROM dockerfile/java:oracle-java8
 MAINTAINER Paul Ambrose "pambrose@mac.com"
 
+VOLUME ["/haptava/conf"]
+
 ADD http://downloads.haptava.io/releases/0.9.39/log4j/shell.log4j.properties /haptava/log4j/
 ADD http://downloads.haptava.io/releases/0.9.39/lib/shell.jar /haptava/lib/
 
